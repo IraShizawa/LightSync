@@ -1,0 +1,13 @@
+{
+  "name": "lightsync-rehearsal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.0.0" },
+  "scripts": {
+    "start": "node Server/main.ts",
+    "lan": "node Server/main.ts --lan",
+    "test": "node --test Tests/*.test.mjs"
+  },
+  "dependencies": { "ws": "8.23.0" }
+}
