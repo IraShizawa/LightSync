@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = "1";
+	classes = {
+	};
+	objectVersion = "56";
+	objects = {
+		92F07089E032AB1A7E3186DA = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "iOS/Shared/Session.swift";
+			sourceTree = "<group>";
+		};
+		F1BBAA30385B7475EE492180 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "iOS/Shared/StageUI.swift";
+			sourceTree = "<group>";
+		};
+		8EE041B020D84C7625C34C84 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "iOS/Studio/StudioApp.swift";
+			sourceTree = "<group>";
+		};
+		12AB85C287614A9340647148 = {
+			isa = "PBXFileReference";
+			lastKnownFileType = "sourcecode.swift";
+			path = "iOS/Audience/AudienceApp.swift";
+			sourceTree = "<group>";
+		};
+		110C489109D5FB701616154B = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.application";
+			includeInIndex = "0";
+			path = "LightSyncStudio.app";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		0B4DC31E85EA8B9945C050FA = {
+			isa = "PBXBuildFile";
+			fileRef = "92F07089E032AB1A7E3186DA";
+		};
+		83FFC5BEB9ED81814A8D3A28 = {
+			isa = "PBXBuildFile";
+			fileRef = "F1BBAA30385B7475EE492180";
+		};
+		AC9FCEF56A08FAD87A584D10 = {
+			isa = "PBXBuildFile";
+			fileRef = "8EE041B020D84C7625C34C84";
+		};
+		D3BE89016841BA9B67E64146 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = "2147483647";
+			files = ("0B4DC31E85EA8B9945C050FA", "83FFC5BEB9ED81814A8D3A28", "AC9FCEF56A08FAD87A584D10");
+			runOnlyForDeploymentPostprocessing = "0";
+		};
+		F9E51372DF53CCD86209313B = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = "2147483647";
+			files = ();
+			runOnlyForDeploymentPostprocessing = "0";
+		};
+		36EFC6C8EC44682239CD7756 = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = "2147483647";
+			files = ();
+			runOnlyForDeploymentPostprocessing = "0";
+		};
+		0F9BD30D12AD11B719336C43 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lightsync.prototype.studio";
+				GENERATE_INFOPLIST_FILE = "NO";
+				INFOPLIST_FILE = "iOS/Studio/Info.plist";
+				CODE_SIGN_STYLE = "Automatic";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CURRENT_PROJECT_VERSION = "1";
+				MARKETING_VERSION = "0.1.0";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+			};
+			name = "Debug";
+		};
+		D182C11A86D15FD9D775DBF3 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lightsync.prototype.studio";
+				GENERATE_INFOPLIST_FILE = "NO";
+				INFOPLIST_FILE = "iOS/Studio/Info.plist";
+				CODE_SIGN_STYLE = "Automatic";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CURRENT_PROJECT_VERSION = "1";
+				MARKETING_VERSION = "0.1.0";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+			};
+			name = "Release";
+		};
+		5365B97AE281AD42C4F0E30A = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("0F9BD30D12AD11B719336C43", "D182C11A86D15FD9D775DBF3");
+			defaultConfigurationIsVisible = "0";
+			defaultConfigurationName = "Release";
+		};
+		9D5C97343507895FA2842B2E = {
+			isa = "PBXNativeTarget";
+			name = "LightSyncStudio";
+			productName = "LightSyncStudio";
+			productReference = "110C489109D5FB701616154B";
+			productType = "com.apple.product-type.application";
+			buildConfigurationList = "5365B97AE281AD42C4F0E30A";
+			buildPhases = ("D3BE89016841BA9B67E64146", "F9E51372DF53CCD86209313B", "36EFC6C8EC44682239CD7756");
+			buildRules = ();
+			dependencies = ();
+		};
+		1F76F185230B1BAF04FB34C3 = {
+			isa = "PBXFileReference";
+			explicitFileType = "wrapper.application";
+			includeInIndex = "0";
+			path = "LightSyncAudience.app";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		BC287F389097CACB5C4F1CD7 = {
+			isa = "PBXBuildFile";
+			fileRef = "92F07089E032AB1A7E3186DA";
+		};
+		B924E91826E91818E23D604F = {
+			isa = "PBXBuildFile";
+			fileRef = "F1BBAA30385B7475EE492180";
+		};
+		3A053C37CC994A339F43614E = {
+			isa = "PBXBuildFile";
+			fileRef = "12AB85C287614A9340647148";
+		};
+		FABE69678598BB3DDD74E976 = {
+			isa = "PBXSourcesBuildPhase";
+			buildActionMask = "2147483647";
+			files = ("BC287F389097CACB5C4F1CD7", "B924E91826E91818E23D604F", "3A053C37CC994A339F43614E");
+			runOnlyForDeploymentPostprocessing = "0";
+		};
+		F7E46417506C92E2358081DE = {
+			isa = "PBXResourcesBuildPhase";
+			buildActionMask = "2147483647";
+			files = ();
+			runOnlyForDeploymentPostprocessing = "0";
+		};
+		B7843CFAF84F2A8A1AEE419E = {
+			isa = "PBXFrameworksBuildPhase";
+			buildActionMask = "2147483647";
+			files = ();
+			runOnlyForDeploymentPostprocessing = "0";
+		};
+		28A42DA3C83585B791070900 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lightsync.prototype.audience";
+				GENERATE_INFOPLIST_FILE = "NO";
+				INFOPLIST_FILE = "iOS/Audience/Info.plist";
+				CODE_SIGN_STYLE = "Automatic";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CURRENT_PROJECT_VERSION = "1";
+				MARKETING_VERSION = "0.1.0";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+			};
+			name = "Debug";
+		};
+		215DF7F508F16F9DD199E921 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lightsync.prototype.audience";
+				GENERATE_INFOPLIST_FILE = "NO";
+				INFOPLIST_FILE = "iOS/Audience/Info.plist";
+				CODE_SIGN_STYLE = "Automatic";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				CURRENT_PROJECT_VERSION = "1";
+				MARKETING_VERSION = "0.1.0";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+			};
+			name = "Release";
+		};
+		5498C4ACF0D0BC529CCB4FEA = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("28A42DA3C83585B791070900", "215DF7F508F16F9DD199E921");
+			defaultConfigurationIsVisible = "0";
+			defaultConfigurationName = "Release";
+		};
+		BD2338A21B9A5A241C5059DD = {
+			isa = "PBXNativeTarget";
+			name = "LightSyncAudience";
+			productName = "LightSyncAudience";
+			productReference = "1F76F185230B1BAF04FB34C3";
+			productType = "com.apple.product-type.application";
+			buildConfigurationList = "5498C4ACF0D0BC529CCB4FEA";
+			buildPhases = ("FABE69678598BB3DDD74E976", "F7E46417506C92E2358081DE", "B7843CFAF84F2A8A1AEE419E");
+			buildRules = ();
+			dependencies = ();
+		};
+		FBDC4F23F93125BBEEAE800C = {
+			isa = "PBXGroup";
+			children = ("110C489109D5FB701616154B", "1F76F185230B1BAF04FB34C3");
+			sourceTree = "<group>";
+			name = "Products";
+		};
+		B28B7AF69320201D1CF206EB = {
+			isa = "PBXGroup";
+			children = ("92F07089E032AB1A7E3186DA", "F1BBAA30385B7475EE492180", "8EE041B020D84C7625C34C84", "12AB85C287614A9340647148", "FBDC4F23F93125BBEEAE800C");
+			sourceTree = "<group>";
+		};
+		89E1FD6268CC0F221A2BE178 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				SDKROOT = "iphoneos";
+				SWIFT_VERSION = "5.0";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				CLANG_ENABLE_MODULES = "YES";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+			};
+			name = "Debug";
+		};
+		E6DE6C99132752C914FEF632 = {
+			isa = "XCBuildConfiguration";
+			buildSettings = {
+				SDKROOT = "iphoneos";
+				SWIFT_VERSION = "5.0";
+				IPHONEOS_DEPLOYMENT_TARGET = "17.0";
+				CLANG_ENABLE_MODULES = "YES";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+			};
+			name = "Release";
+		};
+		389E3AB3166B5E85D4DB22E9 = {
+			isa = "XCConfigurationList";
+			buildConfigurations = ("89E1FD6268CC0F221A2BE178", "E6DE6C99132752C914FEF632");
+			defaultConfigurationIsVisible = "0";
+			defaultConfigurationName = "Release";
+		};
+		98F54143AB4E86B28C3AFEE0 = {
+			isa = "PBXProject";
+			attributes = {
+				LastSwiftUpdateCheck = "1600";
+				LastUpgradeCheck = "1600";
+			};
+			buildConfigurationList = "389E3AB3166B5E85D4DB22E9";
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = "ja";
+			knownRegions = ("ja", "en", "Base");
+			hasScannedForEncodings = "0";
+			mainGroup = "B28B7AF69320201D1CF206EB";
+			productRefGroup = "FBDC4F23F93125BBEEAE800C";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = ("9D5C97343507895FA2842B2E", "BD2338A21B9A5A241C5059DD");
+		};
+	};
+	rootObject = "98F54143AB4E86B28C3AFEE0";
+}
