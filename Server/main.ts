@@ -32,7 +32,7 @@ function send(ws: WebSocket, message: object) {
 }
 function broadcast() {
   const now = Date.now();
-  if (studio && now - studioSeen > 1600) {
+  if (studio && now - studioSeen > 1200) {
     const expired = studio;
     studio = null;
     peers.delete(expired);

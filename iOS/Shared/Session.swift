@@ -31,7 +31,7 @@ final class Session: ObservableObject {
     private var loop: Task<Void, Never>?
     private var pulse: Task<Void, Never>?
     private var foreground = true
-    private var lastState = Date()
+    private var lastState = ContinuousClock.now
     private var base: URL?
     private var muteKey: String { "muted." + (base?.absoluteString ?? "") + "." + credential }
 
@@ -110,18 +110,21 @@ final class Session: ObservableObject {
                 socket = ws
                 message = "サーバーに接続中…"
                 ws.resume()
-                lastState = Date()
-                pulse = Task { [self] in
-                    while !Task.isCancelled, socket === ws {
+                lastState = .now
+                pulse = Task {
+                    while !Task.isCancelled, self.socket === ws {
                         do {
-                            try await Task.sleep(for: .milliseconds(400))
-                            guard socket === ws else { return }
-                            if Date().timeIntervalSince(lastState) > (state == nil ? 5 : 1.25) {
-                                state = nil
+                            try await Task.sleep(for: .milliseconds(300))
+                            guard self.socket === ws else { return }
+                            let timeout: Duration = self.state == nil ? .seconds(5) : .milliseconds(1100)
+                            if self.lastState.duration(to: .now) > timeout {
+                                self.state = nil
                                 ws.cancel(with: .goingAway, reason: nil)
                                 return
                             }
-                            if isStudio && state != nil { try await send(["type": "ping"], to: ws) }
+                            if self.isStudio && self.state != nil {
+                                try await self.send(["type": "ping"], to: ws)
+                            }
                         } catch { return }
                     }
                 }
@@ -138,7 +141,7 @@ final class Session: ObservableObject {
                         @unknown default: continue
                         }
                         if let current = try? JSONDecoder().decode(ShowState.self, from: data) {
-                            lastState = Date()
+                            lastState = .now
                             if state == nil { message = "" }
                             state = current
                         } else if let info = try? JSONSerialization.jsonObject(with: data) as? [String: String],
